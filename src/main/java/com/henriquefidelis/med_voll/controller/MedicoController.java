@@ -1,7 +1,5 @@
 package com.henriquefidelis.med_voll.controller;
 
-import com.henriquefidelis.med_voll.medico.*;
-
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import com.henriquefidelis.med_voll.domain.medico.*;
 
 @RestController
 @RequestMapping("/medicos")

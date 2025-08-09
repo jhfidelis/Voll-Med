@@ -1,6 +1,7 @@
-package com.henriquefidelis.med_voll.medico;
+package com.henriquefidelis.med_voll.domain.medico;
 
-import com.henriquefidelis.med_voll.endereco.DadosEndereco;
+import com.henriquefidelis.med_voll.domain.endereco.DadosEndereco;
+
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,6 +1,6 @@
-package com.henriquefidelis.med_voll.medico;
+package com.henriquefidelis.med_voll.domain.medico;
 
-import com.henriquefidelis.med_voll.endereco.Endereco;
+import com.henriquefidelis.med_voll.domain.endereco.Endereco;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
