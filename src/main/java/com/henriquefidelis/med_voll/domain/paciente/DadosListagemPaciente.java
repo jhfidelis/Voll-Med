@@ -1,4 +1,4 @@
-package com.henriquefidelis.med_voll.paciente;
+package com.henriquefidelis.med_voll.domain.paciente;
 
 public record DadosListagemPaciente(
     Long id,

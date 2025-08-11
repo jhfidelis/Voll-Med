@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.henriquefidelis.med_voll.paciente.DadosAtualizacaoPaciente;
-import com.henriquefidelis.med_voll.paciente.DadosCadastroPaciente;
-import com.henriquefidelis.med_voll.paciente.DadosListagemPaciente;
-import com.henriquefidelis.med_voll.paciente.Paciente;
-import com.henriquefidelis.med_voll.paciente.PacienteRepository;
+import com.henriquefidelis.med_voll.domain.paciente.DadosAtualizacaoPaciente;
+import com.henriquefidelis.med_voll.domain.paciente.DadosCadastroPaciente;
+import com.henriquefidelis.med_voll.domain.paciente.DadosListagemPaciente;
+import com.henriquefidelis.med_voll.domain.paciente.Paciente;
+import com.henriquefidelis.med_voll.domain.paciente.PacienteRepository;
 
 import jakarta.validation.Valid;
 

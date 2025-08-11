@@ -1,6 +1,6 @@
-package com.henriquefidelis.med_voll.paciente;
+package com.henriquefidelis.med_voll.domain.paciente;
 
-import com.henriquefidelis.med_voll.endereco.DadosEndereco;
+import com.henriquefidelis.med_voll.domain.endereco.DadosEndereco;
 
 import jakarta.validation.constraints.NotNull;
 

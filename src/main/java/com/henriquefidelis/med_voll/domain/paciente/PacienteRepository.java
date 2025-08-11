@@ -1,4 +1,4 @@
-package com.henriquefidelis.med_voll.paciente;
+package com.henriquefidelis.med_voll.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
