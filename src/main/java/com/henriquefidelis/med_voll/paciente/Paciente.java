@@ -56,5 +56,9 @@ public class Paciente {
             this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
+
+    public void exluirPaciente() {
+        this.ativo = false;
+    }
     
 }
