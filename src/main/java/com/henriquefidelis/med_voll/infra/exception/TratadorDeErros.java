@@ -1,4 +1,4 @@
-package com.henriquefidelis.med_voll.infra;
+package com.henriquefidelis.med_voll.infra.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
