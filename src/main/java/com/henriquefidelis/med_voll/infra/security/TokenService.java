@@ -3,6 +3,8 @@ package com.henriquefidelis.med_voll.infra.security;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.JWT;
@@ -13,9 +15,12 @@ import com.henriquefidelis.med_voll.domain.usuario.Usuario;
 @Service
 public class TokenService {
 
+    @Value("${api.security.token.secret}")
+    private String secret;
+
     public String gerarToken(Usuario usuario) {
         try {
-            var algoritmo = Algorithm.HMAC256("12345678");
+            var algoritmo = Algorithm.HMAC256(secret);
             return JWT.create()
                     .withIssuer("API Voll.Med")
                     .withSubject(usuario.getLogin())
