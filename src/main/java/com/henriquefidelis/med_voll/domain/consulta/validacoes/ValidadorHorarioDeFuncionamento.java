@@ -2,12 +2,15 @@ package com.henriquefidelis.med_voll.domain.consulta.validacoes;
 
 import java.time.DayOfWeek;
 
+import org.springframework.stereotype.Component;
+
 import com.henriquefidelis.med_voll.domain.ValidacaoException;
 import com.henriquefidelis.med_voll.domain.consulta.DadosAgendamentoConsulta;
 
-public class ValidadorHorarioDeFuncionamento {
+@Component
+public class ValidadorHorarioDeFuncionamento implements ValidadorAgendamentoDeConsulta {
 
-    public void validarDiaEHorario(DadosAgendamentoConsulta dados) {
+    public void validar(DadosAgendamentoConsulta dados) {
         var dataConsulta = dados.data();
 
         var domingo = dataConsulta.getDayOfWeek().equals(DayOfWeek.SUNDAY);
