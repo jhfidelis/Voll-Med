@@ -12,8 +12,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.henriquefidelis.med_voll.domain.medico.*;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     @Autowired

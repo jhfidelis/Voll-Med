@@ -20,10 +20,12 @@ import com.henriquefidelis.med_voll.domain.paciente.DadosListagemPaciente;
 import com.henriquefidelis.med_voll.domain.paciente.Paciente;
 import com.henriquefidelis.med_voll.domain.paciente.PacienteRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/pacientes")
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
 
     @Autowired
