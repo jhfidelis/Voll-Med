@@ -2,6 +2,8 @@ package com.henriquefidelis.med_voll.domain.consulta;
 
 import java.time.LocalDateTime;
 
+import com.henriquefidelis.med_voll.domain.medico.Especialidade;
+
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 
@@ -13,7 +15,9 @@ public record DadosAgendamentoConsulta(
 
     @NotNull
     @Future
-    LocalDateTime data
+    LocalDateTime data,
+
+    Especialidade especialidade
 ) {
     
 }

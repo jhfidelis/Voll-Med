@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.henriquefidelis.med_voll.domain.ValidacaoException;
+import com.henriquefidelis.med_voll.domain.medico.Medico;
 import com.henriquefidelis.med_voll.domain.medico.MedicoRepository;
 import com.henriquefidelis.med_voll.domain.paciente.PacienteRepository;
 
@@ -28,12 +29,24 @@ public class AgendaDeConsulta {
             throw new ValidacaoException("Id do paciente informado não existe");
         }
         
-        var medico = medicoRepository.findById(dados.idMedico()).get();
-        var paciente = pacienteRepository.findById(dados.idPaciente()).get();
+        var medico = escolherMedico(dados);
+        var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
 
         var consulta = new Consulta(null, medico, paciente, dados.data());
 
         consultaRepository.save(consulta);
+    }
+
+    private Medico escolherMedico(DadosAgendamentoConsulta dados) {
+        if (dados.idMedico() != null) {
+            return medicoRepository.getReferenceById(dados.idMedico());
+        }
+
+        if (dados.especialidade() == null) {
+            throw new ValidacaoException("A especialidade é obrigatória quando o médico não for escolhido");
+        }
+
+        return medicoRepository.escolherMedicoAleatoriamente(dados.especialidade(), dados.data());
     }
     
 }
